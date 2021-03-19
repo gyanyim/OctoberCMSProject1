@@ -1,0 +1,24 @@
+title = "Add actors"
+url = "/add-actors"
+layout = "default"
+is_hidden = 0
+
+[actorform]
+
+[actors]
+results = 0
+sortOrder = "name asc"
+
+[session]
+security = "user"
+redirect = "login"
+==
+<h2>Add Actor to the database</h2>
+
+{% component 'actorform' %}
+
+<div>
+    <h2>Actors in our database:</h2>
+
+    {% component 'actors' %}
+</div>

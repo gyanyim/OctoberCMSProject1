@@ -1,0 +1,48 @@
+<header class="main-header">
+    <div class="container clearfix">
+
+        <h1 class="logo">Movies</h1>
+
+        <nav class="main-nav">
+            <ul>
+                <li class="{% if this.page.id == 'homepage' %} active {% endif %}"><a
+                        href="{{ 'homepage' |page }}">Home</a></li>
+                <li class="{% if this.page.id == 'moviesdb' %} active {% endif %}"><a
+                        href="{{ 'moviesdb' |page }}">Movies</a></li>
+                <li class="{% if this.page.id == 'add-actors' %} active {% endif %}"><a
+                        href="{{ 'add-actors' |page }}">Add actors</a></li>
+                <!--<li class="{% if this.page.id == 'history' %} active {% endif %}"><a href="{{ 'history' |page }}">History</a></li>-->
+                <li class="{% if this.page.id == 'youtube' %} active {% endif %}"><a
+                        href="https://www.youtube.com/watch?v=3SmnExVW0Ag&list=PLUBR53Dw-Ef-X-_A1KLy41r2QArCBy4rM"
+                        target='_blank'>tutorial</a></li>
+                <li class="{% if this.page.id == 'contact' %} active {% endif %}"><a
+                        href="{{ 'contact' |page }}">Contact</a></li>
+                <li class="{% if this.page.id == 'login' %} active {% endif %}"><a href="{{ 'login' |page }}">
+
+                        {% if not user %}
+                        Login
+                        {% else %}
+                        My profile
+                        {% endif %}
+
+                    </a></li>
+
+                {% if user %}
+
+                <li><a data-request="onLogout" data-request-data="redirect: '/homepage'">Sign out</a></li>
+
+                {% endif %}
+
+
+
+
+            </ul>
+
+
+        </nav>
+
+
+    </div>
+
+
+</header>
